@@ -1,0 +1,119 @@
+/* --------------------------
+   BASE HEADER WRAPPER
+--------------------------- */
+.nav-wrapper {
+  width: 100%;
+  height: 44px;                  /* Apple uses 44px on desktop */
+  background: rgba(0,0,0,0.92);  /* Same as apple.com */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0.5px solid rgba(255,255,255,0.1); /* Apple subtle divider */
+  display: flex;
+  align-items: center;
+}
+
+/* --------------------------
+   CONTAINER
+--------------------------- */
+.container {
+  width: 100%;
+  max-width: 980px;              /* Apple’s max content width */
+  margin: auto;
+  padding: 0 22px;
+}
+
+/* --------------------------
+   NAVBAR
+--------------------------- */
+.navbar {
+  height: 44px;                  /* Match wrapper */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --------------------------
+   MOBILE HAMBURGER
+--------------------------- */
+.hamburger {
+  display: block;
+  border: none;
+  background: none;
+  color: #f5f5f7;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* --------------------------
+   LOGO
+--------------------------- */
+.logo-center img {
+  width: 17px;
+  height: auto;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.logo-center:hover img {
+  opacity: 1;
+}
+
+/* --------------------------
+   NAV LINKS
+--------------------------- */
+.nav-links {
+  display: none; /* hidden on mobile */
+  list-style: none;
+  align-items: center;
+  gap: 28px;     /* Apple link spacing */
+}
+
+.nav-links li a {
+  color: #f5f5f7;
+  text-decoration: none;
+  font-size: 12px;              /* Exact Apple size */
+  letter-spacing: 0.02em;       /* Slight spacing */
+  opacity: 0.8;
+  font-weight: 300;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links li a:hover {
+  opacity: 1;
+}
+
+/* --------------------------
+   ICONS
+--------------------------- */
+.icon {
+  width: 15px;
+  opacity: 0.8;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+/* --------------------------
+   DESKTOP STYLES
+--------------------------- */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .logo-center {
+    margin-right: 20px;
+  }
+}

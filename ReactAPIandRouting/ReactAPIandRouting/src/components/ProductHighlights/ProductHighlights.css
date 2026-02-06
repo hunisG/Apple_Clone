@@ -1,0 +1,175 @@
+/* =========================================
+   GLOBAL STYLES SHARED BY ALL 3 SECTIONS
+========================================= */
+
+.black {
+  color: #1d1d1f;
+}
+
+.grey {
+  color: #86868b;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.title-wraper {
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.description-wrapper {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.price-wrapper {
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+.links-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.links-wrapper ul li a {
+  text-decoration: none;
+  color: #2997ff;
+  font-size: 18px;
+}
+
+.links-wrapper ul li a:hover {
+  text-decoration: underline;
+}
+
+.new-alert {
+  color: #bf4800;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================================
+   SECTION 1 — iPad Pro 
+========================================= */
+
+.first-hightlight-wrapper {
+  background-image: url("../../assets/images/home/ipodPronew.jpg"); /* UPDATE if needed */
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 600px;
+  text-align: center;
+  padding-top: 100px;
+  color: #1d1d1f;
+}
+
+.ipod-caption {
+  font-size: 14px;
+  color: #6e6e73;
+  margin-top: 260px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ipod-caption div {
+  flex: 1;
+}
+
+/* Mobile responsive fix */
+@media (max-width: 768px) {
+  .ipod-caption {
+    display: block;
+    text-align: center;
+    margin-top: 160px;
+  }
+  .ipod-caption div {
+    margin-bottom: 6px;
+  }
+}
+
+/* =========================================
+   SECTION 2 — MacBook Air
+========================================= */
+
+.second-hightlight-wrapper {
+  background-image: url("../../assets/images/home/macbookair-new-sm.jpg"); /* UPDATE PATH */
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 600px;
+  text-align: center;
+  padding-top: 100px;
+  background-color: #f5f5f7;
+}
+
+/* overrides */
+.second-hightlight-wrapper .price-wrapper.grey {
+  color: #86868b;
+}
+
+/* =========================================
+   SECTION 3 — iPhone 11 Pro
+========================================= */
+
+.third-hightlight-wrapper {
+  background-image: url("../../assets/images/home/iphone11-pro-bg.jpg"); /* UPDATE PATH */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  text-align: center;
+  padding-top: 100px;
+  background-color: black;
+  color: white;
+}
+
+.third-hightlight-wrapper .title-wraper {
+  color: white;
+}
+
+.third-hightlight-wrapper .description-wrapper {
+  color: #f5f5f7;
+}
+
+.third-hightlight-wrapper .price-wrapper {
+  opacity: 0.9;
+  color: #f5f5f7;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE (Shared)
+========================================= */
+
+@media (max-width: 768px) {
+  .title-wraper {
+    font-size: 38px;
+  }
+
+  .description-wrapper {
+    font-size: 18px;
+  }
+
+  .price-wrapper {
+    font-size: 16px;
+  }
+
+  .links-wrapper ul li a {
+    font-size: 16px;
+  }
+
+  .first-hightlight-wrapper,
+  .second-hightlight-wrapper,
+  .third-hightlight-wrapper {
+    height: auto;
+    padding: 80px 20px;
+    padding-bottom: 160px;
+  }
+}
